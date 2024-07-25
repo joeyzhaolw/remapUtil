@@ -1,6 +1,6 @@
 {
   "name": "remaputils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a simple npm utils lib for remap",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
@@ -15,8 +15,8 @@
     "prepublish": "pnpm version && pnpm build"
   },
 	"repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/joeyzhaolw/remapUtil.git"
+		"type": "git",
+		"url": "git+https://github.com/joeyzhaolw/remapUtil.git"
 	},
   "keywords": [
     "utils"
@@ -27,7 +27,7 @@
   "author": "zhaolw",
   "license": "MIT",
 	"bugs": {
-	  "url": "https://github.com/joeyzhaolw/remapUtil/issues"
+		"url": "https://github.com/joeyzhaolw/remapUtil/issues"
 	},
 	"homepage": "https://github.com/joeyzhaolw/remapUtil#readme",
   "dependencies": {
