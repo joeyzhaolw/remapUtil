@@ -1,6 +1,6 @@
 {
   "name": "remaputils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a simple npm utils lib for remap",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
@@ -14,22 +14,22 @@
     "build": "npm run build:types && rollup -c",
     "prepublish": "pnpm version && pnpm build"
   },
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/joeyzhaolw/remapUtil.git"
-	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyzhaolw/remapUtil.git"
+  },
   "keywords": [
     "utils"
   ],
-	"publishConfig": {
-	  "access": "public"
-	},
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "zhaolw",
   "license": "MIT",
-	"bugs": {
-		"url": "https://github.com/joeyzhaolw/remapUtil/issues"
-	},
-	"homepage": "https://github.com/joeyzhaolw/remapUtil#readme",
+  "bugs": {
+    "url": "https://github.com/joeyzhaolw/remapUtil/issues"
+  },
+  "homepage": "https://github.com/joeyzhaolw/remapUtil#readme",
   "dependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
@@ -40,5 +40,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12"
   }
 }

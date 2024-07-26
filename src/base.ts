@@ -5,9 +5,9 @@
  * @returns 
  */
 export const mydebounce = (fn: any, delay: number, immediate = false) => {
-	let timer = null
+	let timer: NodeJS.Timeout | null = null
 	let isInvoke = false
-	const _debounce = function(...args: any[]) {
+	const _debounce = function(this: any, ...args: any[]) {
 		if (timer) clearTimeout(timer)
 		if (!isInvoke && immediate) {
 			fn.call(this, args)
@@ -36,7 +36,7 @@ export const mydebounce = (fn: any, delay: number, immediate = false) => {
  */
 export const myThrottle = (fn: any, interval: number, immediate = true) => {
 	let startTime = 0
-	const _throttle = function(...args: any[]) {
+	const _throttle = function(this: any, ...args: any[]) {
 		const nowTime = new Date().getTime()
 		if (!immediate && startTime === 0) {
 			startTime = nowTime

@@ -24,6 +24,7 @@
     "emitDeclarationOnly": true,
     // 指定输出文件目录(用于输出)，用于控制输出目录结构
     "rootDir": "src",
+		"types": ["node"],
     "paths": {
       "@/*": ["src/*"],
       "@types/*": ["src/types/*"],
