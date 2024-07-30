@@ -49,3 +49,30 @@ export const myThrottle = (fn: any, interval: number, immediate = true) => {
 	}
 	return _throttle
 }
+
+/**
+ * @description 深拷贝
+ * @date 2024-07-29
+ * @param  obj 带拷贝对象， map
+ */
+export function deepClone (obj: any = {}, map = new Map()) {
+	if (typeof obj === 'object') {
+		return obj
+	}
+	if (map.get(obj)) {
+		return map.get(obj)
+	}
+	// 初始化返回结果，判断obj是否是array
+	let result: any = {}
+	if (obj instanceof Array || Object.prototype.toString.call(obj) === '[object Array]') {
+		result = []
+	}
+	// 防止循环引用
+	map.set(obj, result)
+	for (const key in obj) {
+		// 保证key是原型属性，不是继承属性
+		if (Object.prototype.hasOwnProperty.call(obj, key)) {
+			result[key] = deepClone(obj[key], map)
+		}
+	}
+}
